@@ -1,0 +1,606 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bluebox Free Bootstrap Admin Template</title>
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css">
+</head>
+<script>
+    onLoad = () => {
+        //this.startTime();
+        this.setAgedOrder(500);
+    }
+    startTime = () => {
+        document.getElementById('txt').innerHTML = new Date().getDate();
+        var t = setTimeout(startTime, 1000);
+    }
+    checkTime = i => {
+        if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+        return i;
+    }
+    setAgedOrder = value => {
+        document.getElementsByClassName('agedOrders')[0].innerText = value;
+    }
+</script>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="C:\Users\admin\Desktop\bluebox-admin-free-web-template\assets\img\H.A.L 70004.png" alt="lOGO" height="60">
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Doe</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Today</em>
+                                    </span>
+                                </div>
+                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem Ipsum has been the industry's standard dummy text ever since an kwilnw...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem Ipsum has been the industry's standard dummy text ever since the...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">28% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="28"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 28%">
+                                            <span class="sr-only">28% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">85% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85"
+                                            aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                                            <span class="sr-only">85% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 min</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-alerts -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div id="sideNav" href=""><i class="fa fa-caret-right"></i></div>
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="active-menu" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="ui-elements.html"><i class="fa fa-desktop"></i> UI Elements</a>
+                    </li>
+                    <li>
+                        <a href="chart.html"><i class="fa fa-bar-chart-o"></i> Charts</a>
+                    </li>
+                    <li>
+                        <a href="tab-panel.html"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
+                    </li>
+
+                    <li>
+                        <a href="table.html"><i class="fa fa-table"></i> Responsive Tables</a>
+                    </li>
+                    <li>
+                        <a href="form.html"><i class="fa fa-edit"></i> Forms </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#"><i class="fa fa-sitemap"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="empty.html"><i class="fa fa-fw fa-file"></i> Empty Page</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+
+        <div id="page-wrapper">
+            <div class="header">
+                <h1 class="page-header">
+                    Dashboard <small>Summary of your App</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li class="active">Data</li>
+                </ol>
+
+            </div>
+            <div id="page-inner">
+
+                <!-- /. ROW  -->
+
+                <div class="row">
+                    <div class="col-md-1 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder blue">
+                            <div class="panel-left pull-left blue">
+                                <i class="fa fa-eye fa-5x"></i>
+
+                            </div>
+                            <div class="panel-right">
+                                <h3>2</h3>
+                                <strong>New Orders</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder blue">
+                            <div class="panel-left pull-left blue">
+                                <i class="fa fa-shopping-cart fa-5x"></i>
+                            </div>
+
+                            <div class="panel-right">
+                                <h3>0 </h3>
+                                <strong>Aged Orders</strong>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder blue">
+                            <div class="panel-left pull-left blue">
+                                <i class="fa fa fa-comments fa-5x"></i>
+
+                            </div>
+                            <div class="panel-right">
+                                <h3>50</h3>
+                                <strong> Unread Emails </strong>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-sm-12 col-xs-12">
+                        <div class="panel panel-primary text-center no-boder blue">
+                            <div class="panel-left pull-left blue">
+                                <i class="fa fa-users fa-5x"></i>
+
+                            </div>
+                            <div class="panel-right">
+                                <h3>268 </h3>
+                                <strong>Active Products</strong>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Team Support
+                            </div>
+                            <div class="panel-body">
+                                <iframe src="https://app.na3.teamsupport.com"frameborder="0" allowfullscreen
+                                style="width:330px ;height:46pc;"></iframe>
+                            </div>
+
+                    </div>
+                </div>
+
+                    
+                    <div class="col-md-7">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    Daily Notes
+                                </div>
+                                <div class="panel-body" contenteditable="true">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt est vitae ultrices accumsan. Aliquam ornare lacus adipiscing, posuere lectus et, fringilla augue.</p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        Panel Footer
+                                    </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="column">
+                            <div class="col-xs-6 col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body easypiechart-panel">
+                                        <h4>Cape Town SA</h4>
+                                        <iframe src="http://free.timeanddate.com/clock/i6lf65gu/n56/fs20/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="124" height="50"></iframe>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="col-xs-6 col-md-3">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body easypiechart-panel">
+                                            <h4>London UK</h4>
+                                            <iframe src="http://free.timeanddate.com/clock/i6lmhx0t/n136/fs20/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="124" height="50"></iframe>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="col-xs-6 col-md-3">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body easypiechart-panel">
+                                                <h4>Texas US</h4>
+                                                <iframe src="http://free.timeanddate.com/clock/i6lmhx0t/n70/fs20/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="124" height="50"></iframe>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="col-xs-6 col-md-3">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body easypiechart-panel">
+                                                    <h4>Sydney AU</h4>
+                                                    <iframe src="http://free.timeanddate.com/clock/i6lmhx0t/n240/fs20/tt0/tw0/tm1/ts1/tb4" frameborder="0" width="124" height="50"></iframe>                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                <div class="column">
+                    <div class="col-xs-6 col-md-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body easypiechart-panel">
+                                    <h4>Spiceworks</h4>
+                                    <a href="http://helpdesk/pro_users/login">
+                                    <img src="C:\Users\admin\Desktop\bluebox-admin-free-web-template\assets\img\Spiceworks.jpg" width="180" height="50"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="col-xs-6 col-md-3">
+                            <div class="panel panel-default">
+                                <div class="panel-body easypiechart-panel">
+                                        <h4>Shopify</h4>
+                                        <a href="https://bath-body-home.myshopify.com/admin">
+                                        <img src="C:\Users\admin\Desktop\bluebox-admin-free-web-template\assets\img\Shopidy.jpg" width="180" height="50"></iframe>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="col-xs-6 col-md-3">
+                                <div class="panel panel-default">
+                                    <div class="panel-body easypiechart-panel">
+                                        <h4>Genisys</h4>
+                                        <a href="http://wmsweb/auth/login">
+                                        <img src="C:\Users\admin\Desktop\bluebox-admin-free-web-template\assets\img\Genisys.jpg" width="180" height="50"></iframe>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="col-xs-6 col-md-3">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body easypiechart-panel">
+                                                <h4>Skynet</h4>
+                                                <a href="http://hartley/wh3-prod/web/">
+                                                    <img src="C:\Users\admin\Desktop\bluebox-admin-free-web-template\assets\img\Skynet.jpg" width="180" height="50"></iframe>
+                                                </div>
+                                    </div>
+                                </div>
+
+
+                <div class="row">
+                    <div class="col-md-9 col-sm-12 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Skynet Login
+                            </div>
+                            <iframe src="http://hartley/wh3-prod/web/TimeSheet" frameborder="0" width="670" height="320" scrolling="yes"></iframe>
+                            <div class="panel-body">
+                                <div id="morris-area-chart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="col-md-40 col-sm-12 col-xs-12" style="width:230px; height:320px">
+                            <div class="panel panel-default" style="height:320px">
+                                <div class="panel-heading">
+                                   Spotify
+                                </div>
+                                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5Ejj0EkURtP" width="200" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>                        </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+                    </div>
+                </div>
+
+
+                <!-- /. ROW  -->
+              <!--   <div class="row">
+                    <div class="">
+                        <div class="panel panel-default col-md-2" style="width:300px; height:320px">
+                            <div class="panel-heading">
+                                Spotify
+                            </div>
+                            <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX28yPuNTio0f" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+
+                    <div class="column">
+                        <div class="col-md-40 col-sm-12 col-xs-12" style="width:300px; height:320px">
+                            <div class="panel panel-default" style="height:320px">
+                                <div class="panel-heading">
+                                   Spotify
+                                </div>
+                                <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX28yPuNTio0f" width="100%" height="100%" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                        </div>
+                    -->
+                    
+
+                            
+
+
+
+                <footer onload="onLoad()"> 
+                    <p>All right reserved. Template by: Jakob</p>
+
+
+                </footer>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+
+
+    <script src="assets/js/easypiechart.js"></script>
+    <script src="assets/js/easypiechart-data.js"></script>
+
+    <script src="assets/js/Lightweight-Chart/jquery.chart.js"></script>
+
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+
+    <script>
+
+    </script>
+
+
+
+</div>
